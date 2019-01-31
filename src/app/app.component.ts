@@ -15,4 +15,18 @@ export class AppComponent {
   pi = Math.PI;
 
   a = 0.234;
+
+  activar = true;
+
+  salario = 16000;
+
+  objeto = {
+    nombre: 'nombroso',
+    apellido: 'apellidoso',
+    edad: '25',
+    direccion: {
+      calle: 'primera',
+      portal: '36',
+    },
+  };
 }

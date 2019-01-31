@@ -58,9 +58,38 @@
         <td>{{ a | percent }}</td>
       </tr>
       <tr>
-        <td>{{ a }}</td>
-        <td>percent: '2.2-4'</td>
-        <td>{{ a | percent: '2.2-4' }}</td>
+        <td>{{ salario }}</td>
+        <td>currency</td>
+        <td>{{ salario | currency }}</td>
+      </tr>
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR'</td>
+        <td>{{ salario | currency: 'EUR' }}</td>
+      </tr>
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR':false</td>
+        <td>{{ salario | currency: 'EUR':false }}</td>
+      </tr>
+      <tr>
+        <td>{{ salario }}</td>
+        <td>currency:'EUR':true:'4.0-0'</td>
+        <td>{{ salario | currency: 'EUR':true:'4.0-0' }}</td>
+      </tr>
+      <tr>
+        <td>{{ nombre }}</td>
+        <td>
+          contraseña <br />
+          <button
+            (click)="activar = !activar"
+            type="button"
+            class="btn btn-outline-primary"
+          >
+            Activar/Desactivar
+          </button>
+        </td>
+        <td>{{ nombre | contrasena: activar }}</td>
       </tr>
     </tbody>
   </table>
@@ -69,4 +98,7 @@
   <ul>
     <li *ngFor="let item of (array | slice: 5:20)">{{ item }}</li>
   </ul>
+
+  <h4>JSON</h4>
+  <pre>{{ objeto | json }}</pre>
 </div>
